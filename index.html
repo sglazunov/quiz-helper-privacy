@@ -1,0 +1,255 @@
+<title>Политика конфиденциальности</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+  :root{
+    --bg:#eef3f8;
+    --surface:#ffffff;
+    --surface-2:#f4f8fc;
+    --ink:#12212f;
+    --ink-soft:#425468;
+    --ink-faint:#748899;
+    --line:#dde6ef;
+    --accent:#1478c4;
+    --accent-ink:#0b5a98;
+    --accent-wash:#e4f0fa;
+    --ok:#1f9d63;
+    --ok-wash:#e3f5ec;
+    --warn:#c67a12;
+    --warn-wash:#fbeed6;
+    --radius:14px;
+    --maxw:44rem;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0b1420;
+      --surface:#111e2c;
+      --surface-2:#16283a;
+      --ink:#e7eef6;
+      --ink-soft:#a9bccf;
+      --ink-faint:#6f8399;
+      --line:#22384c;
+      --accent:#4aa8ea;
+      --accent-ink:#8fcbf3;
+      --accent-wash:#152c40;
+      --ok:#4cc98a;
+      --ok-wash:#122e22;
+      --warn:#e2a446;
+      --warn-wash:#33280f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0b1420;
+    --surface:#111e2c;
+    --surface-2:#16283a;
+    --ink:#e7eef6;
+    --ink-soft:#a9bccf;
+    --ink-faint:#6f8399;
+    --line:#22384c;
+    --accent:#4aa8ea;
+    --accent-ink:#8fcbf3;
+    --accent-wash:#152c40;
+    --ok:#4cc98a;
+    --ok-wash:#122e22;
+    --warn:#e2a446;
+    --warn-wash:#33280f;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Manrope",-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:20px 20px 72px}
+  header.mast{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px 26px 24px;
+    margin-top:24px;
+    position:relative;
+    overflow:hidden;
+  }
+  header.mast::before{
+    content:"";position:absolute;left:0;top:0;height:4px;width:100%;
+    background:linear-gradient(90deg,var(--accent),#38b0d8);
+  }
+  .brand{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .mark{
+    width:40px;height:40px;border-radius:11px;flex:none;
+    background:linear-gradient(150deg,#2ea3e0,#0d6cb8);
+    display:grid;place-items:center;
+    box-shadow:0 4px 12px rgba(20,120,196,.28);
+  }
+  .mark svg{width:26px;height:26px}
+  .brand .name{font-weight:700;font-size:15px;letter-spacing:.01em}
+  .brand .kind{font-size:12.5px;color:var(--ink-faint)}
+  h1{
+    font-size:clamp(1.7rem,4.5vw,2.3rem);
+    line-height:1.12;font-weight:800;margin:.1em 0 .35em;
+    text-wrap:balance;letter-spacing:-.015em;
+  }
+  .updated{
+    display:inline-block;font-size:12.5px;font-weight:600;
+    color:var(--accent-ink);background:var(--accent-wash);
+    padding:4px 11px;border-radius:999px;
+    font-variant-numeric:tabular-nums;
+  }
+  .tldr{
+    display:flex;gap:13px;
+    background:var(--ok-wash);
+    border:1px solid color-mix(in srgb,var(--ok) 30%,transparent);
+    border-radius:var(--radius);
+    padding:16px 18px;margin:26px 0 8px;
+  }
+  .tldr svg{width:22px;height:22px;flex:none;margin-top:2px;color:var(--ok)}
+  .tldr b{color:var(--ink)}
+  .tldr p{margin:0;color:var(--ink-soft);font-size:15px}
+  section{margin-top:32px}
+  h2{
+    font-size:1.16rem;font-weight:700;margin:0 0 4px;
+    letter-spacing:-.01em;display:flex;align-items:baseline;gap:10px;
+  }
+  h2 .n{
+    font-size:.78rem;font-weight:700;color:var(--accent);
+    background:var(--accent-wash);border-radius:7px;
+    padding:2px 8px;font-variant-numeric:tabular-nums;
+    position:relative;top:-2px;
+  }
+  section>p{color:var(--ink-soft);margin:.5em 0}
+  ul{margin:.5em 0;padding-left:0;list-style:none}
+  li{
+    color:var(--ink-soft);margin:.55em 0;padding-left:26px;position:relative;
+  }
+  li::before{
+    content:"";position:absolute;left:6px;top:.62em;
+    width:6px;height:6px;border-radius:50%;background:var(--accent);
+  }
+  li b, p b{color:var(--ink);font-weight:600}
+  .card{
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius);padding:18px 20px;margin-top:14px;
+  }
+  .warn{
+    background:var(--warn-wash);
+    border:1px solid color-mix(in srgb,var(--warn) 32%,transparent);
+    border-radius:var(--radius);padding:15px 18px;margin-top:14px;
+    color:var(--ink-soft);font-size:14.5px;
+  }
+  .warn b{color:var(--ink)}
+  code{
+    font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    font-size:.87em;background:var(--surface-2);
+    border:1px solid var(--line);border-radius:6px;padding:1px 6px;
+  }
+  a{color:var(--accent-ink);text-decoration-color:color-mix(in srgb,var(--accent) 45%,transparent);text-underline-offset:2px}
+  a:hover{text-decoration-color:var(--accent)}
+  .contact{
+    margin-top:34px;background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius);padding:20px 22px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;
+  }
+  .contact .lbl{font-weight:700;font-size:15px}
+  .contact a{font-weight:600}
+  footer{margin-top:40px;text-align:center;color:var(--ink-faint);font-size:12.5px}
+  hr.div{border:none;border-top:1px solid var(--line);margin:0}
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <div>
+        <div class="name">Помощник по тестам Росдистантикам</div>
+        <div class="kind">Расширение для браузера · ИИ-ассистент для онлайн-тестов</div>
+      </div>
+    </div>
+    <h1>Политика конфиденциальности</h1>
+    <span class="updated">Обновлено: 15 сентября 2026</span>
+  </header>
+
+  <div class="tldr">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5l8-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <p><b>Коротко.</b> Расширение работает локально в вашем браузере. Разработчик <b>не собирает, не хранит и не передаёт третьим лицам</b> ваши данные. Своих серверов у расширения нет. Единственная передача — текст вопроса уходит выбранному вами провайдеру ИИ, чтобы получить подсказку.</p>
+  </div>
+
+  <section>
+    <h2><span class="n">1</span> Какие данные и где хранятся</h2>
+    <p>Все данные остаются <b>только на вашем устройстве</b>, в хранилище браузера (<code>chrome.storage.local</code> и <code>IndexedDB</code>):</p>
+    <ul>
+      <li><b>Настройки и API-ключ</b> выбранного провайдера ИИ (если вы вводите свой ключ).</li>
+      <li><b>Локальная база ответов</b> — вопросы и правильные ответы, которые расширение запоминает со страницы «Просмотр» пройденного теста.</li>
+      <li><b>Загруженные учебники</b> и распознанный из них текст (функция OCR).</li>
+    </ul>
+    <p>Эти данные никуда не отправляются автоматически, доступны только вам и удаляются кнопкой «Очистить базу» или при удалении расширения.</p>
+  </section>
+
+  <hr class="div">
+
+  <section>
+    <h2><span class="n">2</span> Какие данные и куда передаются</h2>
+    <p>Чтобы сформировать подсказку, расширение отправляет <b>текст вопроса</b> (а при необходимости — изображение вопроса и подходящий фрагмент вашего учебника) <b>напрямую выбранному вами провайдеру ИИ</b>:</p>
+    <ul>
+      <li>Google Gemini (провайдер по умолчанию),</li>
+      <li>либо Groq, Anthropic Claude, xAI Grok или Сбер GigaChat — по вашему выбору и вашему ключу.</li>
+    </ul>
+    <p>Данные обрабатываются согласно политике конфиденциальности соответствующего провайдера. Для Gemini, Groq, Claude и Grok разработчик <b>не участвует</b> в передаче и не видит содержимое запросов. Если выбран режим «Только по учебнику», интернет не используется вовсе.</p>
+    <div class="warn"><b>Исключение — GigaChat.</b> Сбер не принимает запросы напрямую из браузера, поэтому при выборе GigaChat запрос проходит через промежуточный сервер (мост) разработчика, который меняет ваш ключ на токен и передаёт запрос Сберу. Ваш ключ при этом <b>не записывается в журналы и не сохраняется на диск</b> (в памяти хранится только его хэш и временный токен). Если вы не хотите использовать этот сервер — выбирайте другого провайдера.</div>
+  </section>
+
+  <hr class="div">
+
+  <section>
+    <h2><span class="n">3</span> Чего расширение не делает</h2>
+    <ul>
+      <li>Не отправляет данные разработчику или третьим лицам, кроме выбранного провайдера ИИ.</li>
+      <li>Не показывает рекламу и не занимается отслеживанием (трекингом).</li>
+      <li>Не продаёт и не передаёт данные для маркетинга.</li>
+      <li>Не собирает историю браузера, пароли или данные автозаполнения.</li>
+    </ul>
+  </section>
+
+  <hr class="div">
+
+  <section>
+    <h2><span class="n">4</span> Разрешения и зачем они</h2>
+    <div class="card">
+      <ul style="margin:0">
+        <li><b>Хранилище</b> — сохранение настроек и базы ответов локально.</li>
+        <li><b>Доступ к страницам тестов</b> (rosdistant.ru и Moodle) — чтение текста вопросов, чтобы сформировать подсказку.</li>
+        <li><b>Доступ к API провайдеров ИИ</b> — отправка вопроса выбранному сервису.</li>
+        <li><b>Изменение сетевых заголовков</b> — только для корректной работы запросов к API ИИ; трафик не отслеживается и не блокируется.</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section>
+    <h2><span class="n">5</span> Хранение, удаление и дети</h2>
+    <p>Данные хранятся до тех пор, пока вы их не удалите (кнопка «Очистить базу» или удаление расширения). Расширение не предназначено для детей младше 13 лет и не собирает данные осознанно.</p>
+  </section>
+
+  <hr class="div">
+
+  <section>
+    <h2><span class="n">6</span> Изменения политики</h2>
+    <p>При изменении политики обновляется дата вверху страницы. Существенные изменения будут отражены в описании расширения в интернет-магазине Chrome.</p>
+  </section>
+
+  <div class="contact">
+    <span class="lbl">Контакт по вопросам конфиденциальности:</span>
+    <a href="mailto:kreativcloude@gmail.com">kreativcloude@gmail.com</a>
+  </div>
+
+  <footer>
+    Помощник по тестам Росдистантикам · Политика конфиденциальности · 2026
+  </footer>
+</div>
